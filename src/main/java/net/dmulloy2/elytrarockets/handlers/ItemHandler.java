@@ -110,7 +110,7 @@ public class ItemHandler {
 
 		ItemMeta meta = item.getItemMeta();
 		meta.setDisplayName(getDisplay(getTier(item), Config.maxFuel));
-		meta.setLore(getLore(0, false));
+		meta.setLore(getLore(0, true));
 
 		item.setItemMeta(meta);
 	}
