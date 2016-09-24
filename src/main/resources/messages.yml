@@ -1,0 +1,50 @@
+display:
+  rockets:
+    # The display name of normal rockets
+    normal: "&e&lElytra Rocket {tier}"
+
+    # The display name of rockets with no fuel left
+    depleted: "&c&lDepleted Rocket {tier}"
+
+  fuel:
+    # Display type of fuel, either NUMBER or SCALE
+    type: "NUMBER"
+
+    # Format for NUMBER display type
+    numberFormat: "Fuel: {color}{cells} cells"
+
+    # Format for SCALE display type
+    scaleFormat: "Fuel: {bar}"
+
+    # Character for SCALE
+    scaleChar: "&l|"
+
+  cells:
+    # The display name of normal fuel cells
+    normal: "&a&lFuel Cell"
+
+    # The display name of empty fuel cells
+    empty: "&c&lEmpty Cell"
+
+    # Lore format
+    format: "Fuel: {cells} cells"
+
+  colors:
+    # Base color for fuel display
+    baseColor: "&7"
+
+    # Color for high (>66%) fuel
+    highFuel: "&a"
+
+    # Color for medium (33-66%) fuel
+    mediumFuel: "&e"
+
+    # Color for low (<33%) fuel
+    lowFuel: "&c"
+
+messages:
+  refuel:
+    notRocket: "You must supply a valid rocket!"
+    notFuel: "You must supply valid rocket fuel!";
+    invalidSlot: "You can't put your &c{0} &4there!"
+    emptyCell: "This fuel cell is empty!"

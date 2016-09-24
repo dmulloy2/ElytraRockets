@@ -1,0 +1,94 @@
+# ElytraRockets Configuration
+# (c) 2016 dmulloy2
+
+# The maximum fuel a rocket can have
+# Set to -1 to disable
+maxFuel: 100
+
+# The material fuel rockets are made of
+# Must be a valid Bukkit material
+material: "FIREWORK"
+
+tier:
+  # The default tier for rockets
+  default: 1
+
+  # Maximum tier
+  max: 10
+
+  # Tier multiplier
+  # Formula: (tier * multiplier) + 1
+  multiplier: 0.25
+
+mechanics:
+  # Added to the y velocity
+  yOffset: 0.1
+
+  # Max height rockets can be used at
+  # Set to -1 to disable
+  maxHeight: 256
+
+activation:
+  # Whether or not to activate on player interact
+  onInteract: true
+
+  # Whether or nor to activate on player drop
+  onDrop: true
+
+# Hub Mode - [wiki link]
+# Useful for server hubs
+hubMode:
+  enabled: false
+
+  # Whether or not rocket fuel is unlimited in hub mode
+  unlimited: true
+
+  # Tier of hub mode rockets
+  tier: 1
+
+  # Starting fuel, only useful if not unlimited
+  fuel: 100
+
+  # Hub worlds, set to * for all worlds
+  worlds: []
+
+display:
+  # The display name of normal rockets
+  normal: "&e&lElytra Rocket {tier}"
+
+  # The display name of rockets with no fuel left
+  depleted: "&c&lDepleted Rocket {tier}"
+
+  # Display type of fuel, either NUMBER or SCALE
+  fuel: "NUMBER"
+
+  # Format for NUMBER display type
+  numberFormat: "Fuel: {color}{cells} cells"
+
+  # Format for SCALE display type
+  scaleFormat: "Fuel: {bar}"
+
+  # Character for SCALE
+  scaleChar: "&l|"
+
+  # Base color for fuel display
+  baseColor: "&7"
+
+  # Color for high (>66%) fuel
+  highFuel: "&a"
+
+  # Color for medium (33-66%) fuel
+  mediumFuel: "&e"
+
+  # Color for low (<33%) fuel
+  lowFuel: "&c"
+
+# Economy is used for purchasing rockets and fuel
+econ:
+  enabled: true
+
+  # The base cost of rockets
+  baseCost: 50000
+
+  # The extra cost per tier
+  tierCost: 25000

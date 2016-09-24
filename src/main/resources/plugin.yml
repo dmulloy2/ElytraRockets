@@ -1,0 +1,28 @@
+name: ElytraRockets
+main: net.dmulloy2.elytrarockets.ElytraRockets
+author: dmulloy2
+version: ${project.version}
+description: Rocket boosters for Elytra
+
+commands:
+  rocket:
+    description: ElytraRockets base command
+    usage: /<command> <args>
+    aliases: [elytrarockets, er]
+
+permissions:
+  elytrarockets.cmd.buy:
+    description: Allows access to '/rocket buy'
+    default: false
+  elytrarockets.cmd.give:
+    description: Allows access to '/rocket give'
+    default: false
+  elytrarockets.cmd.info:
+    description: Allows access to '/rocket info'
+    default: true
+  elytrarockets.cmd.refuel:
+    description: Allows access to '/rocket refuel'
+    default: true
+  elytrarockets.cmd.reload:
+    description: Allows access to '/rocket reload'
+    default: op
