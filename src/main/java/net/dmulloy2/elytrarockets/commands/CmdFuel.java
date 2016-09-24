@@ -54,7 +54,7 @@ public class CmdFuel extends ElytraRocketsCommand {
 		ItemStack rocket = player.getInventory().getItemInMainHand();
 		checkArgument(rocket != null && handler.isFuelRocket(rocket), "You must havea rocket in your hand to do this!");
 
-		int fuel = argAsInt(0, true);
+		int fuel = argAsInt(1, true);
 		handler.setFuel(rocket, fuel);
 
 		sendpMessage("Rocket fuel set to &b{0} &ecells.", handler.getFuel(rocket));
@@ -63,8 +63,8 @@ public class CmdFuel extends ElytraRocketsCommand {
 	private void give() {
 		checkPermission(player, Permission.CMD_FUEL_GIVE);
 
-		int fuel = argAsInt(0, true);
-		Player target = getPlayer(1, true);
+		int fuel = argAsInt(1, true);
+		Player target = getPlayer(2, true);
 
 		ItemStack item = plugin.getFuelHandler().create(fuel);
 		if (InventoryUtil.giveItem(target, item).isEmpty()) {

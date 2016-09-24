@@ -102,7 +102,7 @@ public class Messages {
 
 	public static String refuelNotRocket = "You must supply a valid rocket!";
 
-	public static String refuelNotFuel = "You must supply valid rockert fuel!";
+	public static String refuelNotFuel = "You must supply valid rocket fuel!";
 
 	public static String refuelInvalidSlot = "You can't put your &c{0} &4there!";
 

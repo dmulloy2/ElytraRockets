@@ -7,6 +7,7 @@ import net.dmulloy2.SwornPlugin;
 import net.dmulloy2.commands.CmdHelp;
 import net.dmulloy2.commands.CmdReload;
 import net.dmulloy2.elytrarockets.commands.CmdBuy;
+import net.dmulloy2.elytrarockets.commands.CmdFuel;
 import net.dmulloy2.elytrarockets.commands.CmdGive;
 import net.dmulloy2.elytrarockets.commands.CmdInfo;
 import net.dmulloy2.elytrarockets.commands.CmdRefuel;
@@ -58,6 +59,7 @@ public class ElytraRockets extends SwornPlugin {
 
 		commandHandler.setCommandPrefix("rocket");
 		commandHandler.registerPrefixedCommand(new CmdBuy(this));
+		commandHandler.registerPrefixedCommand(new CmdFuel(this));
 		commandHandler.registerPrefixedCommand(new CmdHelp(this));
 		commandHandler.registerPrefixedCommand(new CmdGive(this));
 		commandHandler.registerPrefixedCommand(new CmdInfo(this));

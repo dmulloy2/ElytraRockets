@@ -54,9 +54,9 @@ public class PlayerListener implements Listener {
 						}
 					}
 				}
-			}
 
-			return;
+				return;
+			}			
 		}
 
 		event.setCancelled(true);

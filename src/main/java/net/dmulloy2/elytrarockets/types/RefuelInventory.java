@@ -151,13 +151,13 @@ public class RefuelInventory implements InventoryHolder {
 		FuelHandler fuelHandler = plugin.getFuelHandler();
 
 		boolean isRocket = itemHandler.isFuelRocket(item);
-		if (!isRocket) {
+		if (!isRocket && slot == ROCKET_SLOT) {
 			err(Messages.refuelNotRocket);
 			return false;
 		}
 
 		boolean isFuel = fuelHandler.isFuelCell(item);
-		if (!isFuel) {
+		if (!isFuel && slot == FUEL_SLOT) {
 			err(Messages.refuelNotFuel);
 			return false;
 		}
