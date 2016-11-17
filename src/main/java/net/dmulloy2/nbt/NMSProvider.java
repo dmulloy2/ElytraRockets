@@ -5,9 +5,9 @@ package net.dmulloy2.nbt;
 
 import java.lang.reflect.Field;
 
-import net.minecraft.server.v1_10_R1.NBTTagCompound;
+import net.minecraft.server.v1_11_R1.NBTTagCompound;
 
-import org.bukkit.craftbukkit.v1_10_R1.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_11_R1.inventory.CraftItemStack;
 import org.bukkit.inventory.ItemStack;
 
 /**
@@ -38,12 +38,12 @@ public class NMSProvider implements NBTProvider {
 
 	@Override
 	public boolean hasTag(Object handle) {
-		return ((net.minecraft.server.v1_10_R1.ItemStack) handle).hasTag();
+		return ((net.minecraft.server.v1_11_R1.ItemStack) handle).hasTag();
 	}
 
 	@Override
 	public boolean hasKeys(ItemStack item, String... keys) {
-		net.minecraft.server.v1_10_R1.ItemStack handle = (net.minecraft.server.v1_10_R1.ItemStack) getHandle(item);
+		net.minecraft.server.v1_11_R1.ItemStack handle = (net.minecraft.server.v1_11_R1.ItemStack) getHandle(item);
 		if (handle.hasTag()) {
 			NBTTagCompound tag = handle.getTag();
 			for (String key : keys) {
@@ -60,7 +60,7 @@ public class NMSProvider implements NBTProvider {
 
 	@Override
 	public int getInt(ItemStack item, String key) {
-		net.minecraft.server.v1_10_R1.ItemStack handle = (net.minecraft.server.v1_10_R1.ItemStack) getHandle(item);
+		net.minecraft.server.v1_11_R1.ItemStack handle = (net.minecraft.server.v1_11_R1.ItemStack) getHandle(item);
 		if (handle.hasTag()) {
 			NBTTagCompound tag = handle.getTag();
 			return tag.getInt(key);
@@ -71,7 +71,7 @@ public class NMSProvider implements NBTProvider {
 
 	@Override
 	public ItemStack setInt(ItemStack item, String key, int value) {
-		net.minecraft.server.v1_10_R1.ItemStack handle = (net.minecraft.server.v1_10_R1.ItemStack) getHandle(item);
+		net.minecraft.server.v1_11_R1.ItemStack handle = (net.minecraft.server.v1_11_R1.ItemStack) getHandle(item);
 		if (!handle.hasTag()) {
 			handle.setTag(new NBTTagCompound());
 		}
@@ -84,7 +84,7 @@ public class NMSProvider implements NBTProvider {
 
 	@Override
 	public boolean getBoolean(ItemStack item, String key) {
-		net.minecraft.server.v1_10_R1.ItemStack handle = (net.minecraft.server.v1_10_R1.ItemStack) getHandle(item);
+		net.minecraft.server.v1_11_R1.ItemStack handle = (net.minecraft.server.v1_11_R1.ItemStack) getHandle(item);
 		if (handle.hasTag()) {
 			NBTTagCompound tag = handle.getTag();
 			return tag.getBoolean(key);
@@ -95,7 +95,7 @@ public class NMSProvider implements NBTProvider {
 
 	@Override
 	public ItemStack setBoolean(ItemStack item, String key, boolean value) {
-		net.minecraft.server.v1_10_R1.ItemStack handle = (net.minecraft.server.v1_10_R1.ItemStack) getHandle(item);
+		net.minecraft.server.v1_11_R1.ItemStack handle = (net.minecraft.server.v1_11_R1.ItemStack) getHandle(item);
 		if (!handle.hasTag()) {
 			handle.setTag(new NBTTagCompound());
 		}
