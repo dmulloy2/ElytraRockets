@@ -61,6 +61,7 @@ public class CmdGive extends ElytraRocketsCommand {
 		player.updateInventory();
 
 		String name = player.equals(sender) ? "yourself" : player.getName();
-		sendpMessage("You have given &b{0} &ea tier &b{1} &erocket with &b{2} &efuel cells.", name, tier, fuel);
+		String fuelStr = unlimited ? "&bunlimited &efuel" : "&b" + fuel + " &efuel cells";
+		sendpMessage("You have given &b{0} &ea tier &b{1} &erocket with {2}.", name, tier, fuelStr);
 	}
 }

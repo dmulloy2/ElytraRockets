@@ -45,6 +45,6 @@ display:
 messages:
   refuel:
     notRocket: "You must supply a valid rocket!"
-    notFuel: "You must supply valid rocket fuel!";
+    notFuel: "You must supply valid rocket fuel!"
     invalidSlot: "You can't put your &c{0} &4there!"
     emptyCell: "This fuel cell is empty!"

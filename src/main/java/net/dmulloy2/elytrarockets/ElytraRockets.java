@@ -54,8 +54,7 @@ public class ElytraRockets extends SwornPlugin {
 		permissionHandler = new PermissionHandler(this);
 		commandHandler = new CommandHandler(this);
 
-		getCommandProps().
-			setReloadPerm(Permission.CMD_RELOAD);
+		props().setReloadPerm(Permission.CMD_RELOAD);
 
 		commandHandler.setCommandPrefix("rocket");
 		commandHandler.registerPrefixedCommand(new CmdBuy(this));

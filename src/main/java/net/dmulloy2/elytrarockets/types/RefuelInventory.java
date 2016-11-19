@@ -88,7 +88,7 @@ public class RefuelInventory implements InventoryHolder {
 	}
 
 	private void err(String message, Object... args) {
-		player.sendMessage(FormatUtil.format(plugin.getCommandProps().getErrorPrefix() + message, args));
+		player.sendMessage(plugin.props().formatErr(message, args));
 	}
 
 	@Override
